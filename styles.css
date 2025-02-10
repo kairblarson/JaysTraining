@@ -116,3 +116,36 @@ body {
     cursor: pointer;
     color: black !important;
 }
+@media (max-width: 830px) {
+    .nav-button {
+        font-size: 15px;
+        min-width: 0px;
+    }
+    .nav-button-container {
+        gap: 10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav-button {
+        display: none;
+    }
+    .nav-button-container {
+        gap: 10px;
+    }
+    .content-overlay-container {
+        margin-left: 50px;
+    }
+    .content-name {
+        font-size: 25px;
+    }
+    .content-header {
+        font-size: 50px;
+    }
+    .content-subheader {
+        font-size: 25px;
+    }
+    .content-buttons {
+        font-size: 13px;
+    }
+  }
