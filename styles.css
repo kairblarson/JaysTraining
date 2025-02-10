@@ -108,6 +108,7 @@ body {
     font-size: 15px;
     font-weight: bold;
     border: 1px solid white;
+    color: black;
 }
 .content-buttons:hover {
     background-color: rgb(125, 152, 226) !important;
@@ -147,5 +148,11 @@ body {
     }
     .content-buttons {
         font-size: 13px;
+    }
+  }
+
+  @media (max-height: 700px) {
+    .content-overlay-container {
+        margin-top: 100px;
     }
   }
