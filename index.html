@@ -17,10 +17,40 @@
                 <button class="nav-button">PROGRAMS</button>
                 <button class="nav-button">CHALLENGES</button>
                 <button class="nav-button">CONTACT ME</button>
+                <!-- <nav role="navigation">
+                    <div id="menuToggle">
+                      <div style="background-color: orange; position: relative;" class="menu-container">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="checkbox" id="menuCheckbox" style="position: absolute;"/>
+                      </div>
+                    </div>
+                  </nav>
+                  <ul id="menu">
+                    <li>
+                      <a href="#">
+                        <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#about">
+                        <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+                      </a>
+                    </li>
+                    <li><label for="menuCheckbox"><a>Info</a></label></li>
+                    <li><label for="menuCheckbox"><a>Contact</a></label></li>
+                    <li>
+                      <a href="https://erikterwan.com/" target="_blank">Show me more</a>
+                    </li>
+                  </ul> -->
             </div>
         </div>
         <div class="content">
-            <img src="images/generic-gif.gif" class="content-main-gif" />
+            <video loop autoplay muted id="content-video">
+                <source src="images/vid1.mov">
+            </video>
+            <!-- <img src="images/vid1.mov" class="content-main-gif" /> -->
             <div class="content-gif-overlay">
                 <div class="content-overlay-container">
                     <h1 class="content-name">JAY SOUTHARD</h1>
@@ -33,7 +63,26 @@
                     </div>
                 </div>
             </div>
+            <div class="content-box-2">
+                <div style="display: flex; gap: 50px; padding: 50px; max-width: 100%; justify-content: space-around;" class="content-box-2-wrapper">
+                    <img src="/images/img3.JPG" class="content-box-2-img"/>
+                    <div style="margin-top: 50px; display: flex; flex-direction: column; max-width: 30%;" class="content-box-2-text">
+                        <h2 class="content-box-2-title">WHO AM I?</h2>
+                        <br>
+                        <p>MY NAME IS JAY SOUTHARD & Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio, debitis odit voluptatum id autem veniam officiis ut amet iure nemo cumque excepturi saepe! Impedit alias tempora itaque maiores deleniti!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="content-box-3">
+                <h2 class="content-box-3-title">JAY SOUTHARD LIFTING PROGRAMS</h2>
+                <div class="content-box-3-programs-container">
+
+                </div>
+            </div> -->
         </div>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/script.js"></script>
 </html>
+<!-- WORK ON THE BURGER MENU & ADDING MORE CONTENT -->
