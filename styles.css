@@ -124,6 +124,38 @@ body {
 .content-box-2-wrapper {
 
 }
+#menu-container {
+    display: none;
+}
+#mobile-menu-container {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: 100px;
+    gap: 30px;
+    height: 100vh;
+    /* display: none; */
+}
+#unfocused-div {
+    /* background-color: orange; */
+    position: absolute;
+    height: 1000vh;
+    width: 100vw;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1); /* White background with 20% opacity */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(5px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+    padding: 20px; /* Padding inside the element */
+    color: #fff; /* Text color */
+    display: none;
+}
 .content-buttons {
     background-color: white;
     padding-inline: 40px;
@@ -168,6 +200,9 @@ body {
     }
     .nav-button-container {
         gap: 10px;
+        justify-content: end;
+        padding-right: 20px;
+        display: flex;
     }
     .content-overlay-container {
         margin-left: 50px;
@@ -196,6 +231,12 @@ body {
     }
     .content-box-2-title {
         font-size: 25px;
+    }
+    #mobile-menu-container {
+        /* display: flex; */
+    }
+    #menu-container {
+        display: block;
     }
   }
 
@@ -251,7 +292,7 @@ body {
 /*
  * Just a quick hamburger
  */
-#menuToggle span
+span
 {
   display: block;
   width: 33px;
@@ -271,12 +312,12 @@ body {
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
+span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
+span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
