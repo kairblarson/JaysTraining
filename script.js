@@ -48,10 +48,4 @@ $( document ).ready(function() {
             isMenuActive = true;
         }
     });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var video = document.getElementById('content-video');
-        video.muted = true;
-        video.play();
-      });
 });
