@@ -10,18 +10,25 @@ $( document ).ready(function() {
         }
     })
 
+    //setting the height of the gradient overlay
     const heightOfVideo = $("#content-video").height();
     $(".content-gif-overlay").height(heightOfVideo);
-    $("#unfocused-div").height(heightOfVideo);
+
+    //setting the height of the unfocused div for when the mobile menu is active
+    $("#unfocused-div").height($(window).height);
+
+    //placing the mobile menu off the screen
     const widthOfMenu = $("#mobile-menu-container").width();
     $("#mobile-menu-container").css({
         "top": "0px",  
         "right": -(widthOfMenu+100)  
       });
 
+
     $(window).resize(function() {
         // console.log("Window resized to: " + $(window).width() + "x" + $(window).height());
-        $(".content-gif-overlay").height($(window).height());
+        const heightOfVideo = $("#content-video").height();
+        $(".content-gif-overlay").height(heightOfVideo);
     });
 
     $("#menu-container").click(function() {
@@ -31,13 +38,13 @@ $( document ).ready(function() {
             console.log("HERE 1")
             $("#mobile-menu-container").animate({ right: -200 }, "slow");
             // $("#mobile-menu-container").css("display", "none");
-            $("unfocused-div").css("display", "none");
+            $("#unfocused-div").css("display", "none");
             isMenuActive = false;
         } else {
             console.log("HERE 2")
             $("#mobile-menu-container").animate({ right: "0px" }, "slow");
             $("#mobile-menu-container").css("display", "flex");
-            $("unfocused-div").css("display", "block");
+            $("#unfocused-div").css("display", "block");
             isMenuActive = true;
         }
     });

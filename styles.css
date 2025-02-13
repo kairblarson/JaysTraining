@@ -141,20 +141,19 @@ body {
     /* display: none; */
 }
 #unfocused-div {
-    /* background-color: orange; */
     position: absolute;
     height: 1000vh;
-    width: 100vw;
+    width: calc(120vw + 100px);
     overflow: hidden;
     background: rgba(255, 255, 255, 0.1); /* White background with 20% opacity */
-    border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     backdrop-filter: blur(5px); /* Blur effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
-    padding: 20px; /* Padding inside the element */
     color: #fff; /* Text color */
     display: none;
+    transition: all linear .1s;
+    top: 0;
+    left: 0;
 }
 .content-buttons {
     background-color: white;
