@@ -288,6 +288,13 @@ textarea {
     color: white;
     font-weight: bold;
 }
+.contact-wrapper {
+    display: flex; 
+    align-items: start; 
+    justify-content: start; 
+    width: 80%; 
+    gap: 50px;
+}
 @media (max-width: 830px) {
     .nav-button {
         font-size: 15px;
@@ -308,6 +315,18 @@ textarea {
     }
     .content-box-2-img {
         width: 60%;
+    }
+    .contact-wrapper {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-card {
+        width: 80%;
+    }
+    #content-box-2-extra-imgs {
+        flex-wrap: wrap !important;
     }
   }
 
@@ -371,7 +390,7 @@ textarea {
     .content-box-3-program-content {
         width: 90%;
     }
-    .content-box-3, .content-box-2 {
+    .content-box-3, .content-box-2, .content-box-4 {
         padding: 2% !important;
         margin-top: 50px;
     }
