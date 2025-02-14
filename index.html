@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Jay's Training</title>
 </head>
 <body>
@@ -62,7 +65,7 @@
             <!-- <video loop autoplay muted id="content-video">
                 <source src="images/vid1.mov">
             </video> -->
-            <img src="images/main-gif-2.gif" id="content-video"/>
+            <img src="images/main-gif-3.gif" id="content-video"/>
             <!-- <img src="images/vid1.mov" class="content-main-gif" /> -->
             <div class="content-gif-overlay">
                 <div class="content-overlay-container">
@@ -82,7 +85,7 @@
                     <div style="display: flex; flex-direction: column; max-width: 30%;" class="content-box-2-text">
                         <h2 class="content-box-2-title">WHO AM I?</h2>
                         <br>
-                        <h3 style="color: rgb(148, 148, 148); font-weight: 100; line-height: 1.85;">I am a lifting coach based out of Chicago, Illinois</h3>
+                        <h3 style="color: rgb(148, 148, 148); font-weight: 300; line-height: 1.85;">I am a lifting coach based out of Chicago, Illinois</h3>
                         <br>
                         <p style="line-height: 1.85; color: rgb(75, 75, 75);">
                           With over a decade of experience and just under 13,000 hours actively working as a certified elite coach, 
@@ -95,10 +98,10 @@
                 <div class="line-break"></div>
                 <div style="display: flex; flex-direction: row; gap: 2%; padding: 10px; justify-content: space-evenly; width: 80%;" id="content-box-2-extra-imgs">
                   <img src="images/img1.jpg" class="about-me-images"/>
-                  <img src="images/img1.jpg" class="about-me-images"/>
-                  <img src="images/img1.jpg" class="about-me-images"/>
-                  <img src="images/img1.jpg" class="about-me-images"/>
-                  <img src="images/img1.jpg" class="about-me-images"/>
+                  <img src="images/img6.jpg" class="about-me-images"/>
+                  <img src="images/img7.jpg" class="about-me-images"/>
+                  <img src="images/img4.jpg" class="about-me-images"/>
+                  <img src="images/img5.jpg" class="about-me-images"/>
                 </div>
                 <div class="line-break"></div>
             </div>
@@ -106,37 +109,63 @@
                 <h2 class="content-box-3-title">JAY'S LIFTING PROGRAMS</h2>
                 <br><br><br>
                 <div class="content-box-3-programs-container">
-                  <div class="content-box-3-program-content">
-                    <h3 style="text-decoration: underline;">THE FOUNDATION</h3>
+                  <div class="content-box-3-program-content"id="tier3-card">
+                    <h3 style="text-decoration: underline; font-weight: bold; font-size: 20px;">THE FOUNDATION</h3>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                      <p>$149</p>
+                      <p class="card-price">$149</p>
                       <div class="line-break"></div>
                       <p>MONTHLY</p>
                       <div class="line-break"></div>
-                      <p>Your blueprint to elite fitness-custom workouts, expert coaching, and weekly accountability to start your journey</p>
+                      <p>Your blueprint to elite fitness-custom workouts, expert coaching, and weekly accountability to start your journey.</p>
                     </div>
+                    <br>
+                    <button class="program-card-buy-btn">But Now!</button>
                   </div>
-                  <div class="content-box-3-program-content">
-                    <h3 style="text-decoration: underline;">THE FOUNDATION</h3>
+                  <div class="content-box-3-program-content"id="tier2-card">
+                    <h3 style="text-decoration: underline; font-weight: bold; font-size: 20px;">THE ACCELERATOR</h3>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                      <p>$149</p>
+                      <p class="card-price">$249</p>
                       <div class="line-break"></div>
                       <p>MONTHLY</p>
                       <div class="line-break"></div>
-                      <p>Your blueprint to elite fitness-custom workouts, expert coaching, and weekly accountability to start your journey</p>
+                      <p>Next-level results with advanced nutrition, personalized adjustments, and direct access to high-performance coaching.</p>
                     </div>
+                    <br>
+                    <button class="program-card-buy-btn">Buy Now!</button>
                   </div>
-                  <div class="content-box-3-program-content">
-                    <h3 style="text-decoration: underline;">THE FOUNDATION</h3>
+                  <div class="content-box-3-program-content"id="tier1-card">
+                    <h3 style="text-decoration: underline; font-weight: bold; font-size: 20px;">ELITE EXPERIENCE</h3>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                      <p>$149</p>
+                      <p class="card-price">$399</p>
                       <div class="line-break"></div>
                       <p>MONTHLY</p>
                       <div class="line-break"></div>
-                      <p>Your blueprint to elite fitness-custom workouts, expert coaching, and weekly accountability to start your journey</p>
+                      <p>One-on-one high-performance coaching with weekly strategy calls, expert-guided nutrition, and a fully customized game plan built for unstoppable transformation.</p>
                     </div>
+                    <br>
+                    <button class="program-card-buy-btn">Buy Now!</button>
                   </div>
                 </div>
+            </div>
+            <div class="line-break"></div>
+            <div class="content-box-4" style="padding: 50px;">
+              <h2 class="content-box-4-title">CONTACT ME</h2>
+              <br>
+              <h3>Feel free to send me a message if you have any questions about me or any of my programs</h3>
+              <br><br>
+              <div style="display: flex; align-items: start; justify-content: start; width: 80%; gap: 50px;">
+                <div class="contact-card">
+                  <input placeholder="Your Name" />
+                  <input placeholder="Email" />
+                  <textarea placeholder="Message"></textarea>
+                  <button class="send-msg-btn">Send</button>
+                </div>
+                <div class="socials-card">
+                  <p>Instagram</p>
+                  <p>Facebook</p>
+                  <p>Twitter</p>
+                </div>
+              </div>
             </div>
         </div>
     </div>

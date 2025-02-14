@@ -3,7 +3,7 @@
     margin: 0px;
     font-weight: 500;
     border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Work Sans", serif;
 }
 body {
     background-color: white;
@@ -89,7 +89,7 @@ p, h1, h2, h3 {
 .content-name {
     font-size: 25px;
     font-weight: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Work Sans", serif;
     color: white;
 }
 .content-header {
@@ -115,13 +115,13 @@ p, h1, h2, h3 {
     object-fit: cover;
     max-height: calc(100vh - 100px);
 }
-.content-box-3, .content-box-2 {
+.content-box-3, .content-box-2, .content-box-4 {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* padding-top: 100px; */
 }
-.content-box-3-title, .content-box-2-title {
+.content-box-3-title, .content-box-2-title, .content-box-4-title {
     font-weight: bold;
     font-size: 40px;
     text-align: start;
@@ -185,7 +185,7 @@ p, h1, h2, h3 {
 .content-box-3-programs-container {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     justify-content: space-evenly;
 }
 .content-box-3-program-content {
@@ -197,7 +197,7 @@ p, h1, h2, h3 {
     line-height: 1.85;
     border-radius: 10px;
     /* border: 1px solid rgb(125, 152, 226); */
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     max-width: 250px;
     /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 }
@@ -219,6 +219,74 @@ p, h1, h2, h3 {
 }
 p {
     color: rgb(46, 46, 46);
+}
+#tier1-card {
+    box-shadow: rgb(125, 152, 226) 0px 0px 10px 0px;
+}
+#tier2-card {
+    box-shadow: rgb(132, 125, 226) 0px 0px 10px 0px;
+}
+#tier3-card {
+    box-shadow: rgb(186, 125, 226) 0px 0px 10px 0px;
+}
+.program-card-buy-btn {
+    background-color: rgb(125, 152, 226);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.card-price {
+    background-color: rgb(183, 183, 183);
+    width: fit-content;
+    padding-block: 2px;
+    padding-inline: 5px;
+    border-radius: 5px;
+    color: white;
+}
+input {
+    border: 1px solid gainsboro;
+    padding-inline: 10px;
+    padding-block: 7px;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 90%;
+}
+textarea {
+    border: 1px solid gainsboro;
+    padding-inline: 10px;
+    padding-block: 7px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 90%;
+    height: 250px;
+}
+.contact-card {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 20px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+}
+.socials-card {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+}
+.send-msg-btn {
+    background-color: rgb(125, 152, 226);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
 }
 @media (max-width: 830px) {
     .nav-button {
@@ -298,6 +366,7 @@ p {
     .content-box-3-programs-container {
         flex-direction: column;
         gap: 20px;
+        align-items: center;
     }
     .content-box-3-program-content {
         width: 90%;
