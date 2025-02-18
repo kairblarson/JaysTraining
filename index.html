@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap" rel="stylesheet">
     <title>Jay's Training</title>
 </head>
 <body>
@@ -16,11 +17,11 @@
                 <img src="images/official-logo.png" class="nav-logo"/>
             <!-- </div> -->
             <div class="nav-button-container">
-                <button class="nav-button">HOME</button>
-                <button class="nav-button">PROGRAMS</button>
-                <button class="nav-button">CHALLENGES</button>
-                <button class="nav-button">MERCHANDISE</button>
-                <button class="nav-button">CONTACT ME</button>
+                <button class="nav-button" id="nav-button-home">HOME</button>
+                <button class="nav-button" id="nav-button-challenges">CHALLENGES</button>
+                <button class="nav-button" id="nav-button-merchandise">MERCHANDISE</button>
+                <button class="nav-button" id="nav-button-programs">PROGRAMS</button>
+                <button class="nav-button" id="nav-button-contactme">CONTACT ME</button>
                 <div id="unfocused-div"></div>
                 <div id="menu-container">
                   <span class="menu-bar"></span>
@@ -28,11 +29,11 @@
                   <span class="menu-bar"></span>
                 </div>
                 <div id="mobile-menu-container">
-                  <a class="mobile-menu-btn">HOME</a>
-                  <a class="mobile-menu-btn">PROGRAMS</a>
-                  <a class="mobile-menu-btn">CHALLENGES</a>
-                  <a class="mobile-menu-btn">MERCHANDISE</a>
-                  <a class="mobile-menu-btn">CONTACT ME</a>
+                  <a class="mobile-menu-btn" id="mobile-menu-home">HOME</a>
+                  <a class="mobile-menu-btn" id="mobile-menu-challenges">CHALLENGES</a>
+                  <a class="mobile-menu-btn" id="mobile-menu-merchandise">MERCHANDISE</a>
+                  <a class="mobile-menu-btn" id="mobile-menu-programs">PROGRAMS</a>
+                  <a class="mobile-menu-btn" id="mobile-menu-contactme">CONTACT ME</a>
                 </div>
                 <!-- <nav role="navigation">
                     <div id="menuToggle">
@@ -71,7 +72,7 @@
             <!-- <img src="images/vid1.mov" class="content-main-gif" /> -->
             <div class="content-gif-overlay">
                 <div class="content-overlay-container">
-                    <h1 class="content-name">JAY SOUTHARD</h1>
+                    <h1 class="content-name">JAY</h1>
                     <h2 class="content-header">ACHIEVE NEW</h2>
                     <h2 class="content-header">HEIGHTS</h2>
                     <h2 class="content-subheader">CHALLENGE YOURSELF</h2>
@@ -83,11 +84,11 @@
             </div>
             <div class="content-box-2">
                 <div style="display: flex; gap: 50px; padding: 50px; max-width: 100%; justify-content: space-around;" class="content-box-2-wrapper">
-                    <img src="images/img3.JPG" class="content-box-2-img"/>
+                    <img src="images/about-me-img.JPEG" class="content-box-2-img"/>
                     <div style="display: flex; flex-direction: column; max-width: 30%;" class="content-box-2-text">
-                        <h2 class="content-box-2-title">WHO AM I?</h2>
+                        <h2 class="content-box-2-title">JAY</h2>
                         <br>
-                        <h3 style="color: rgb(148, 148, 148); font-weight: 300; line-height: 1.85;">I am a lifting coach based out of Chicago, Illinois</h3>
+                        <!-- <h3 style="color: rgb(148, 148, 148); font-weight: 300; line-height: 1.85;">I am a lifting coach based out of Chicago, Illinois</h3> -->
                         <br>
                         <p style="line-height: 1.85; color: rgb(75, 75, 75);">
                           With over a decade of experience and just under 13,000 hours actively working as a certified elite coach, 
@@ -108,7 +109,7 @@
                 <div class="line-break"></div>
             </div>
             <div class="content-box-5">
-              <h2 class="content-box-5-title" style="margin-block: 50px;">ATHLETE OF THE MONTH</h2>
+              <h2 class="content-box-5-title" style="margin-block: 50px;">CLIENT SPOTLIGHT</h2>
               <div class="testimonial-wrapper">
                 <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
                   <img src="images/testimonial1.jpg" class="content-box-5-testimonial-img"/>
@@ -125,8 +126,28 @@
                 </p>
               </div>
               <div class="line-break"></div>
-          </div>
-            <div class="content-box-3" style="padding: 50px;">
+            </div>
+            <div class="content-box-6" style="padding: 50px;">
+              <h2 class="content-box-6-title" style="margin-bottom: 50px;">MERCHANDISE</h2>
+              <div class="content-box-6-container">
+                <div class="content-box-6-merch">
+                  <img src="images/img5.jpg" class="merch-img">
+                  <p class="merch-title">Train with Jay hoodie</p>
+                  <p class="merch-price">$25.99</p>
+                  <button class="merch-buy-btn">BUY NOW</button>
+                </div>
+                <div class="content-box-6-merch">
+                  <img src="images/img5.jpg" class="merch-img">
+                  <p class="merch-title">Train with Jay hoodie</p>
+                  <p class="merch-price">$25.99</p>
+                  <button class="merch-buy-btn">BUY NOW</button>
+                </div>
+              </div>
+              <br><br>
+              <a class="goto-merch-btn">SEE MORE <img src="images/right-arrow.png" class="goto-arrow"/></a>
+              <div class="line-break" style="margin-top: 50px;"></div>
+            </div>
+            <div class="content-box-3" style="padding: 50px; margin-top: 0px;">
                 <h2 class="content-box-3-title">JAY'S LIFTING PROGRAMS</h2>
                 <br><br><br>
                 <div class="content-box-3-programs-container">
@@ -182,9 +203,17 @@
                   <button class="send-msg-btn">Send</button>
                 </div>
                 <div class="socials-card">
-                  <p>Instagram</p>
-                  <p>Facebook</p>
-                  <p>Twitter</p>
+                  <a class="brand-logo-wrapper" href="https://www.instagram.com/jsouthard22" target="_blank">
+                    <img src="images/insta-logo.png" class="brand-logos"/>
+                    <p>jsouthard22</p>
+                  </a>
+                  <a class="brand-logo-wrapper" href="mailto:Trainingwithjayy@gmail.com?subject=Training%20Inquiry">
+                    <img src="images/email-icon.png" class="brand-logos"/>
+                    <p>Trainingwithjayy@gmail.com</p>
+                  </a>
+                  <!-- <div>
+                    <img src="images/insta-logo.png" class="brand-logos"/>
+                  </div> -->
                 </div>
               </div>
             </div>
