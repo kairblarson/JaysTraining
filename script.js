@@ -35,17 +35,29 @@ $( document ).ready(function() {
         const widthOfMenu = $("#mobile-menu-container").width();
 
         if(isMenuActive) {
-            console.log("HERE 1")
             $("#mobile-menu-container").animate({ right: -200 }, "slow");
             // $("#mobile-menu-container").css("display", "none");
             $("#unfocused-div").css("display", "none");
+            $(".menu-bar").css("background-color", "gainsboro");
             isMenuActive = false;
         } else {
-            console.log("HERE 2")
             $("#mobile-menu-container").animate({ right: "0px" }, "slow");
             $("#mobile-menu-container").css("display", "flex");
             $("#unfocused-div").css("display", "block");
             isMenuActive = true;
+            $(".menu-bar").css("background-color", "black");
         }
     });
+
+    $("#content-programs-btn").click(function() {
+        $('html, body').animate({
+            scrollTop: $('.content-box-3').offset().top - 100
+        }, 1000);
+    })
+
+    $("#content-contactme-btn").click(function() {
+        $('html, body').animate({
+            scrollTop: $('.content-box-4').offset().top - 100
+        }, 1000);
+    })
 });
