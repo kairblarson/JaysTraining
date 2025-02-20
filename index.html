@@ -1,224 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap" rel="stylesheet" />
-    <title>Jay's Training</title>
-  </head>
-  <body>
-    <div id="main">
-      <div class="navbar">
-        <!-- <div class="nav-logo-wrapper"> -->
-        <img src="images/official-logo.png" class="nav-logo" />
-        <!-- </div> -->
-        <div class="nav-button-container">
-          <button class="nav-button" id="nav-button-home">HOME</button>
-          <button class="nav-button" id="nav-button-challenges">CHALLENGES</button>
-          <a class="nav-button" id="nav-button-merchandise">MERCHANDISE</a>
-          <button class="nav-button" id="nav-button-programs">PROGRAMS</button>
-          <button class="nav-button" id="nav-button-contactme">CONTACT ME</button>
-          <div id="unfocused-div"></div>
-          <div id="menu-container">
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
-          </div>
-          <div id="mobile-menu-container">
-            <a class="mobile-menu-btn" id="mobile-menu-home">HOME</a>
-            <a class="mobile-menu-btn" id="mobile-menu-challenges">CHALLENGES</a>
-            <a class="mobile-menu-btn" id="mobile-menu-merchandise">MERCHANDISE</a>
-            <a class="mobile-menu-btn" id="mobile-menu-programs">PROGRAMS</a>
-            <a class="mobile-menu-btn" id="mobile-menu-contactme">CONTACT ME</a>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <!-- <video loop autoplay muted id="content-video">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap" rel="stylesheet" />
+        <script src="https://js.stripe.com/v3/"></script>
+        <title>Jay's Training</title>
+    </head>
+    <body>
+        <div id="main">
+            <div class="navbar">
+                <!-- <div class="nav-logo-wrapper"> -->
+                <img src="images/official-logo.png" class="nav-logo" />
+                <!-- </div> -->
+                <div class="nav-button-container">
+                    <button class="nav-button" id="nav-button-home">HOME</button>
+                    <button class="nav-button" id="nav-button-challenges">CHALLENGES</button>
+                    <a class="nav-button" id="nav-button-merchandise">MERCHANDISE</a>
+                    <button class="nav-button" id="nav-button-programs">PROGRAMS</button>
+                    <button class="nav-button" id="nav-button-contactme">CONTACT ME</button>
+                    <div id="unfocused-div"></div>
+                    <div id="menu-container">
+                        <span class="menu-bar"></span>
+                        <span class="menu-bar"></span>
+                        <span class="menu-bar"></span>
+                    </div>
+                    <div id="mobile-menu-container">
+                        <a class="mobile-menu-btn" id="mobile-menu-home">HOME</a>
+                        <a class="mobile-menu-btn" id="mobile-menu-challenges">CHALLENGES</a>
+                        <a class="mobile-menu-btn" id="mobile-menu-merchandise">MERCHANDISE</a>
+                        <a class="mobile-menu-btn" id="mobile-menu-programs">PROGRAMS</a>
+                        <a class="mobile-menu-btn" id="mobile-menu-contactme">CONTACT ME</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <!-- <video loop autoplay muted id="content-video">
                 <source src="images/vid1.mov">
             </video> -->
-        <img src="images/main-gif-3.gif" id="content-video" />
-        <!-- <img src="images/vid1.mov" class="content-main-gif" /> -->
-        <div class="content-gif-overlay">
-          <div class="content-overlay-container">
-            <h1 class="content-name">JAY</h1>
-            <h2 class="content-header">ACHIEVE NEW</h2>
-            <h2 class="content-header">HEIGHTS</h2>
-            <h2 class="content-subheader">CHALLENGE YOURSELF</h2>
-            <div class="content-buttons-container">
-              <button class="content-buttons" id="content-programs-btn">PROGRAMS</button>
-              <button class="content-buttons" style="background-color: transparent; color: white; border: 1px solid white" id="content-contactme-btn">CONTACT ME</button>
-            </div>
-          </div>
-        </div>
-        <div class="content-box-2">
-          <div style="display: flex; gap: 50px; padding: 50px; max-width: 100%; justify-content: space-around" class="content-box-2-wrapper">
-            <img src="images/about-me-img.JPEG" class="content-box-2-img" />
-            <div style="display: flex; flex-direction: column; max-width: 30%" class="content-box-2-text">
-              <h2 class="content-box-2-title">JAY</h2>
-              <br />
-              <!-- <h3 style="color: rgb(148, 148, 148); font-weight: 300; line-height: 1.85;">I am a lifting coach based out of Chicago, Illinois</h3> -->
-              <br />
-              <p style="line-height: 1.85; color: rgb(75, 75, 75)">
-                With over a decade of experience and just under 13,000 hours actively working as a certified elite coach, I've trained high achievers, entrepreneurs, and elite performers to break
-                their limits—both physically and mentally. My approach isn't just about 'working out'; it's about unlocking the highest level of performance in every area of life. You'll get
-                world-class coaching, cutting-edge training strategies, and the exact strategy used by top-level athletes and executives to dominate in fitness and beyond.
-              </p>
-            </div>
-          </div>
-          <div class="line-break"></div>
-          <div style="display: flex; flex-direction: row; gap: 2%; padding: 10px; justify-content: space-evenly; width: 80%" id="content-box-2-extra-imgs">
-            <img src="images/official-logo.png" class="about-me-images" />
-            <img src="images/img11.JPEG" class="about-me-images" />
-            <img src="images/official-logo.png" class="about-me-images" />
-            <img src="images/img4.jpg" class="about-me-images" />
-            <img src="images/official-logo.png" class="about-me-images" />
-          </div>
-          <div class="line-break"></div>
-        </div>
-        <div class="content-box-5">
-          <h2 class="content-box-5-title">CLIENT SPOTLIGHT</h2>
-          <div class="testimonial-wrapper">
-            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px">
-              <img src="images/testimonial1.jpg" class="content-box-5-testimonial-img" />
-              <div class="content-box-5-identity">
-                <p style="font-weight: bold; font-size: 26px">Kiara Harvey</p>
-                <p style="font-weight: 300; font-size: 18px">24</p>
-                <p style="font-weight: 300; font-size: 18px">Naperville, IL</p>
-              </div>
-            </div>
-            <p class="content-box-5-text">
-              I'm thrilled to announce that Kiara is our Athlete of the Month! Her dedication and hard work have truly paid off, as she has made the most progress among all our clients. Kiara has
-              consistently followed the nutrition and lifting plans I designed for her, showing remarkable discipline and commitment. Her achievements are a testament to her perseverance and positive
-              attitude. Congratulations, Kiara, on this well-deserved recognition! Keep up the fantastic work!
-            </p>
-          </div>
-          <!-- <div class="line-break"></div> -->
-        </div>
-        <div class="content-box-6" style="padding: 50px">
-          <h2 class="content-box-6-title" style="margin-bottom: 50px">MERCHANDISE</h2>
-          <div class="content-box-6-container">
-            <div class="content-box-6-merch">
-              <img src="images/img5.jpg" class="merch-img" />
-              <p class="merch-title">Train with Jay hoodie</p>
-              <p class="merch-price">$25.99</p>
-              <button class="merch-buy-btn">BUY NOW</button>
-            </div>
-            <div class="content-box-6-merch">
-              <img src="images/img13.jpg" class="merch-img" />
-              <p class="merch-title">Train with Jay Cap</p>
-              <p class="merch-price">$14.99</p>
-              <button class="merch-buy-btn">BUY NOW</button>
-            </div>
-          </div>
-          <br /><br />
-          <a class="goto-merch-btn" href="merchandise.html">SEE MORE <img src="images/right-arrow.png" class="goto-arrow" /></a>
-          <!-- <div class="line-break" style="margin-top: 50px"></div> -->
-        </div>
-        <div class="content-box-3" style="padding: 50px; margin-top: 0px">
-          <h2 class="content-box-3-title">JAY'S LIFTING PROGRAMS</h2>
-          <br /><br /><br />
-          <div class="content-box-3-programs-container">
-            <div class="content-box-3-program-content" id="tier3-card">
-              <h3 style="text-decoration: underline; font-weight: bold; font-size: 20px;">THE FOUNDATION</h3>
-              <div style="display: flex; flex-direction: column; gap: 10px; height: 100%;">
-                <p class="card-price">$149</p>
-                <div class="line-break"></div>
-                <p>MONTHLY</p>
-                <div class="line-break"></div>
-                <p>Your blueprint to elite fitness-custom workouts, expert coaching, and weekly accountability to start your journey.</p>
-              </div>
-              <br />
-              <button class="program-card-buy-btn">But Now!</button>
-            </div>
-            <div class="content-box-3-program-content" id="tier2-card">
-              <h3 style="text-decoration: underline; font-weight: bold; font-size: 20px">THE ACCELERATOR</h3>
-              <div style="display: flex; flex-direction: column; gap: 10px; height: 100%;">
-                <p class="card-price">$249</p>
-                <div class="line-break"></div>
-                <p>MONTHLY</p>
-                <div class="line-break"></div>
-                <p>Next-level results with advanced nutrition, personalized adjustments, and direct access to high-performance coaching.</p>
-              </div>
-              <br />
-              <button class="program-card-buy-btn">Buy Now!</button>
-            </div>
-            <div class="content-box-3-program-content" id="tier1-card">
-              <h3 style="text-decoration: underline; font-weight: bold; font-size: 20px">ELITE EXPERIENCE</h3>
-              <div style="display: flex; flex-direction: column; gap: 10px">
-                <p class="card-price">$399</p>
-                <div class="line-break"></div>
-                <p>MONTHLY</p>
-                <div class="line-break"></div>
-                <p>One-on-one high-performance coaching with weekly strategy calls, expert-guided nutrition, and a fully customized game plan built for unstoppable transformation.</p>
-              </div>
-              <br />
-              <button class="program-card-buy-btn">Buy Now!</button>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="line-break"></div> -->
-        <div class="content-box-4" style="padding: 50px">
-          <h2 class="content-box-4-title">CONTACT ME</h2>
-          <br />
-          <h3 style="max-width: 80%">Feel free to send me a message if you have any questions about me or any of my programs</h3>
-          <br /><br />
-          <div class="contact-wrapper">
-            <div class="contact-card">
-              <input placeholder="Your Name" />
-              <input placeholder="Email" />
-              <textarea placeholder="Message"></textarea>
-              <button class="send-msg-btn">Send</button>
-            </div>
-            <div class="socials-card">
-              <a class="brand-logo-wrapper" href="https://www.instagram.com/jsouthard22" target="_blank">
-                <img src="images/insta-logo.png" class="brand-logos" />
-                <p>jsouthard22</p>
-              </a>
-              <a class="brand-logo-wrapper" href="mailto:Trainingwithjayy@gmail.com?subject=Training%20Inquiry">
-                <img src="images/email-icon.png" class="brand-logos" style="background-color: white;"/>
-                <p>Trainingwithjayy@gmail.com</p>
-              </a>
-              <a
-                class="brand-logo-wrapper"
-                href="https://www.google.com/maps/place/Arlington+Heights,+IL/@42.0933805,-88.0681571,12z/data=!3m1!4b1!4m6!3m5!1s0x880fba3bce5cfa37:0xd764707ce5fdcac3!8m2!3d42.0883603!4d-87.9806265!16zL20vMHM0Zmc?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-              >
-                <img src="images/location-icon.png" class="brand-logos" />
-                <p>Arlington Heights, IL.</p>
-              </a>
-              <!-- <div>
+                <img src="images/main-gif-3.gif" id="content-video" />
+                <!-- <img src="images/vid1.mov" class="content-main-gif" /> -->
+                <div class="content-gif-overlay">
+                    <div class="content-overlay-container">
+                        <h1 class="content-name">JAY</h1>
+                        <h2 class="content-header">ACHIEVE NEW</h2>
+                        <h2 class="content-header">HEIGHTS</h2>
+                        <h2 class="content-subheader">CHALLENGE YOURSELF</h2>
+                        <div class="content-buttons-container">
+                            <button class="content-buttons" id="content-programs-btn">PROGRAMS</button>
+                            <button class="content-buttons" style="background-color: transparent; color: white; border: 1px solid white" id="content-contactme-btn">CONTACT ME</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box-2">
+                    <div style="display: flex; gap: 50px; padding: 50px; max-width: 100%; justify-content: space-around" class="content-box-2-wrapper">
+                        <img src="images/about-me-img.JPEG" class="content-box-2-img" />
+                        <div style="display: flex; flex-direction: column; max-width: 30%" class="content-box-2-text">
+                            <h2 class="content-box-2-title">JAY</h2>
+                            <br />
+                            <!-- <h3 style="color: rgb(148, 148, 148); font-weight: 300; line-height: 1.85;">I am a lifting coach based out of Chicago, Illinois</h3> -->
+                            <br />
+                            <p style="line-height: 1.85; color: rgb(75, 75, 75)">
+                                With over a decade of experience and just under 13,000 hours actively working as a certified elite coach, I've trained high achievers, entrepreneurs, and elite
+                                performers to break their limits—both physically and mentally. My approach isn't just about 'working out'; it's about unlocking the highest level of performance in
+                                every area of life. You'll get world-class coaching, cutting-edge training strategies, and the exact strategy used by top-level athletes and executives to dominate in
+                                fitness and beyond.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="line-break"></div>
+                    <div style="display: flex; flex-direction: row; gap: 2%; padding: 10px; justify-content: space-evenly; width: 80%" id="content-box-2-extra-imgs">
+                        <img src="images/official-logo.png" class="about-me-images" />
+                        <img src="images/img11.JPEG" class="about-me-images" />
+                        <img src="images/official-logo.png" class="about-me-images" />
+                        <img src="images/img4.jpg" class="about-me-images" />
+                        <img src="images/official-logo.png" class="about-me-images" />
+                    </div>
+                    <div class="line-break"></div>
+                </div>
+                <div class="content-box-5">
+                    <h2 class="content-box-5-title">CLIENT SPOTLIGHT</h2>
+                    <div class="testimonial-wrapper">
+                        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px">
+                            <img src="images/testimonial1.jpg" class="content-box-5-testimonial-img" />
+                            <div class="content-box-5-identity">
+                                <p style="font-weight: bold; font-size: 26px">Kiara Harvey</p>
+                                <p style="font-weight: 300; font-size: 18px">24</p>
+                                <p style="font-weight: 300; font-size: 18px">Naperville, IL</p>
+                            </div>
+                        </div>
+                        <p class="content-box-5-text">
+                            I'm thrilled to announce that Kiara is our Athlete of the Month! Her dedication and hard work have truly paid off, as she has made the most progress among all our clients.
+                            Kiara has consistently followed the nutrition and lifting plans I designed for her, showing remarkable discipline and commitment. Her achievements are a testament to her
+                            perseverance and positive attitude. Congratulations, Kiara, on this well-deserved recognition! Keep up the fantastic work!
+                        </p>
+                    </div>
+                    <!-- <div class="line-break"></div> -->
+                </div>
+                <div class="content-box-6" style="padding: 50px">
+                    <h2 class="content-box-6-title" style="margin-bottom: 50px">MERCHANDISE</h2>
+                    <div class="content-box-6-container">
+                        <div class="content-box-6-merch">
+                            <img src="images/img5.jpg" class="merch-img" />
+                            <p class="merch-title">Train with Jay hoodie</p>
+                            <p class="merch-price">$25.99</p>
+                            <button class="merch-buy-btn">BUY NOW</button>
+                        </div>
+                        <div class="content-box-6-merch">
+                            <img src="images/img13.jpg" class="merch-img" />
+                            <p class="merch-title">Train with Jay Cap</p>
+                            <p class="merch-price">$14.99</p>
+                            <button class="merch-buy-btn">BUY NOW</button>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <a class="goto-merch-btn" href="merchandise.html">SEE MORE <img src="images/right-arrow.png" class="goto-arrow" /></a>
+                    <!-- <div class="line-break" style="margin-top: 50px"></div> -->
+                </div>
+                <div class="content-box-3" style="padding: 50px; margin-top: 0px">
+                    <h2 class="content-box-3-title">JAY'S LIFTING PROGRAMS</h2>
+                    <br /><br /><br />
+                    <div class="content-box-3-programs-container">
+                        <div class="content-box-3-program-content" id="tier3-card">
+                            <h3 class="program-title">THE FOUNDATION</h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px; height: 100%">
+                                <p class="card-price">$149</p>
+                                <div class="line-break"></div>
+                                <p>MONTHLY</p>
+                                <div class="line-break"></div>
+                                <p>Your blueprint to elite fitness-custom workouts, expert coaching, and weekly accountability to start your journey.</p>
+                            </div>
+                            <br />
+                            <button class="program-card-buy-btn" id="foundation-buy-btn">Buy Now!</button>
+                        </div>
+                        <div class="content-box-3-program-content" id="tier2-card">
+                            <h3 class="program-title">THE ACCELERATOR</h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px; height: 100%">
+                                <p class="card-price">$249</p>
+                                <div class="line-break"></div>
+                                <p>MONTHLY</p>
+                                <div class="line-break"></div>
+                                <p>Next-level results with advanced nutrition, personalized adjustments, and direct access to high-performance coaching.</p>
+                            </div>
+                            <br />
+                            <button class="program-card-buy-btn" id="accelerator-buy-btn">Buy Now!</button>
+                        </div>
+                        <div class="content-box-3-program-content" id="tier1-card">
+                            <h3 class="program-title">ELITE EXPERIENCE</h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px">
+                                <p class="card-price">$399</p>
+                                <div class="line-break"></div>
+                                <p>MONTHLY</p>
+                                <div class="line-break"></div>
+                                <p>One-on-one high-performance coaching with weekly strategy calls, expert-guided nutrition, and a fully customized game plan built for unstoppable transformation.</p>
+                            </div>
+                            <br />
+                            <button class="program-card-buy-btn" id="elite-buy-btn">Buy Now!</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="line-break"></div> -->
+                <div class="content-box-4" style="padding: 50px">
+                    <h2 class="content-box-4-title">CONTACT ME</h2>
+                    <br />
+                    <h3 style="max-width: 80%">Feel free to send me a message if you have any questions about me or any of my programs</h3>
+                    <br /><br />
+                    <div class="contact-wrapper">
+                        <div class="contact-card">
+                            <input placeholder="Your Name" />
+                            <input placeholder="Email" />
+                            <textarea placeholder="Message"></textarea>
+                            <button class="send-msg-btn">Send</button>
+                        </div>
+                        <div class="socials-card">
+                            <a class="brand-logo-wrapper" href="https://www.instagram.com/jsouthard22" target="_blank">
+                                <img src="images/insta-logo.png" class="brand-logos" />
+                                <p>jsouthard22</p>
+                            </a>
+                            <a class="brand-logo-wrapper" href="mailto:Trainingwithjayy@gmail.com?subject=Training%20Inquiry">
+                                <img src="images/email-icon.png" class="brand-logos" style="background-color: white" />
+                                <p>Trainingwithjayy@gmail.com</p>
+                            </a>
+                            <a
+                                class="brand-logo-wrapper"
+                                href="https://www.google.com/maps/place/Arlington+Heights,+IL/@42.0933805,-88.0681571,12z/data=!3m1!4b1!4m6!3m5!1s0x880fba3bce5cfa37:0xd764707ce5fdcac3!8m2!3d42.0883603!4d-87.9806265!16zL20vMHM0Zmc?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"
+                            >
+                                <img src="images/location-icon.png" class="brand-logos" />
+                                <p>Arlington Heights, IL.</p>
+                            </a>
+                            <!-- <div>
                     <img src="images/insta-logo.png" class="brand-logos"/>
                   </div> -->
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-details">
-        <a class="brand-logo-wrapper" href="https://www.instagram.com/jsouthard22" target="_blank">
-          <img src="images/insta-logo.png" class="brand-logo-footer" style="background-color: white; border-radius: 10px; padding: 5px;"/>
-        </a>
-        <a class="brand-logo-wrapper" href="mailto:Trainingwithjayy@gmail.com?subject=Training%20Inquiry">
-          <img src="images/email-icon.png" class="brand-logo-footer" style="background-color: white; border-radius: 10px; padding: 5px;"/>
-        </a>
-        <a
-          class="brand-logo-wrapper"
-          href="https://www.google.com/maps/place/Arlington+Heights,+IL/@42.0933805,-88.0681571,12z/data=!3m1!4b1!4m6!3m5!1s0x880fba3bce5cfa37:0xd764707ce5fdcac3!8m2!3d42.0883603!4d-87.9806265!16zL20vMHM0Zmc?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank"
-        >
-          <img src="images/location-icon.png" class="brand-logo-footer" style="background-color: white; border-radius: 10px; padding: 5px;"/>
-        </a>
-      </div>
-      <small class="footer-copyright">C 2025 Copyright: Kai Larson</small>
-    </div>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="script.js?vers=1"></script>
+        <div class="footer">
+            <div class="footer-details">
+                <a class="brand-logo-wrapper" href="https://www.instagram.com/jsouthard22" target="_blank">
+                    <img src="images/insta-logo.png" class="brand-logo-footer" style="background-color: white; border-radius: 10px; padding: 5px" />
+                </a>
+                <a class="brand-logo-wrapper" href="mailto:Trainingwithjayy@gmail.com?subject=Training%20Inquiry">
+                    <img src="images/email-icon.png" class="brand-logo-footer" style="background-color: white; border-radius: 10px; padding: 5px" />
+                </a>
+                <a
+                    class="brand-logo-wrapper"
+                    href="https://www.google.com/maps/place/Arlington+Heights,+IL/@42.0933805,-88.0681571,12z/data=!3m1!4b1!4m6!3m5!1s0x880fba3bce5cfa37:0xd764707ce5fdcac3!8m2!3d42.0883603!4d-87.9806265!16zL20vMHM0Zmc?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                >
+                    <img src="images/location-icon.png" class="brand-logo-footer" style="background-color: white; border-radius: 10px; padding: 5px" />
+                </a>
+            </div>
+            <small class="footer-copyright">C 2025 Copyright: Kai Larson</small>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js?vers=1"></script>
 </html>
 <!-- WORK ON THE BURGER MENU & ADDING MORE CONTENT -->
