@@ -48,7 +48,6 @@ $(document).ready(function () {
     //
 
     $(".menu-container").click(function () {
-        console.log($("#menuCheckbox").prop("checked"));
         if ($("#menuCheckbox").prop("checked") == true) {
             $("#menu").animate({ left: "-=100px" }, "slow");
         } else {
@@ -76,9 +75,27 @@ $(document).ready(function () {
         $(".content-gif-overlay").height(heightOfVideo);
     });
 
-    $("#menu-container").click(function () {
-        const widthOfMenu = $("#mobile-menu-container").width();
+    $(".view-hoodie-btn").click(function() {
+        window.location.href = "merchandise/hoodie.html"
+    })
 
+    $("#menu-container").click(function () {
+        if (isMenuActive) {
+            $("#mobile-menu-container").animate({ right: -200 }, "slow");
+            // $("#mobile-menu-container").css("display", "none");
+            $("#unfocused-div").css("display", "none");
+            $(".menu-bar").css("background-color", "gainsboro");
+            isMenuActive = false;
+        } else {
+            $("#mobile-menu-container").animate({ right: "0px" }, "slow");
+            $("#mobile-menu-container").css("display", "flex");
+            $("#unfocused-div").css("display", "block");
+            isMenuActive = true;
+            $(".menu-bar").css("background-color", "black");
+        }
+    });
+
+    $("#unfocused-div").click(function () {
         if (isMenuActive) {
             $("#mobile-menu-container").animate({ right: -200 }, "slow");
             // $("#mobile-menu-container").css("display", "none");
@@ -264,6 +281,7 @@ $(document).ready(function () {
         isMenuActive = false;
     }
 
+    //change this to check if NOT on index page so we can redirect to from a specific item as well 
     function checkIfOnMerchPage() {
         if (window.location.pathname == "/merchandise.html") {
             return true;
