@@ -76,7 +76,11 @@ $(document).ready(function () {
     });
 
     $(".view-hoodie-btn").click(function() {
-        window.location.href = "merchandise/hoodie.html"
+        window.location.href = "hoodie.html"
+    })
+
+    $(".view-cap-btn").click(function() {
+        window.location.href = "baseballcap.html"
     })
 
     $("#menu-container").click(function () {
@@ -112,7 +116,7 @@ $(document).ready(function () {
     });
 
     $("#content-programs-btn").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=programs";
         }
         $("html, body").animate(
@@ -124,7 +128,7 @@ $(document).ready(function () {
     });
 
     $("#content-contactme-btn").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=contactme";
         }
         $("html, body").animate(
@@ -137,7 +141,7 @@ $(document).ready(function () {
 
     //main nav buttons
     $("#nav-button-home").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=home";
         }
         $("html, body").animate(
@@ -149,7 +153,7 @@ $(document).ready(function () {
     });
 
     $("#nav-button-programs").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=programs";
         }
         $("html, body").animate(
@@ -161,7 +165,7 @@ $(document).ready(function () {
     });
 
     $("#nav-button-aboutme").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=aboutme";
         }
         $("html, body").animate(
@@ -173,7 +177,7 @@ $(document).ready(function () {
     });
 
     $("#nav-button-challenges").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=challenges";
         }
         $("html, body").animate(
@@ -185,7 +189,7 @@ $(document).ready(function () {
     });
 
     $("#nav-button-contactme").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=contactme";
         }
         $("html, body").animate(
@@ -203,7 +207,7 @@ $(document).ready(function () {
 
     //mobile nav buttons
     $("#mobile-menu-home").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=home";
         }
         $("html, body").animate(
@@ -216,7 +220,7 @@ $(document).ready(function () {
     });
 
     $("#mobile-menu-programs").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=programs";
         }
         $("html, body").animate(
@@ -229,7 +233,7 @@ $(document).ready(function () {
     });
 
     $("#mobile-menu-aboutme").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=aboutme";
         }
         $("html, body").animate(
@@ -242,7 +246,7 @@ $(document).ready(function () {
     });
 
     $("#mobile-menu-challenges").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=challenges";
         }
         $("html, body").animate(
@@ -255,7 +259,7 @@ $(document).ready(function () {
     });
 
     $("#mobile-menu-contactme").click(function () {
-        if (checkIfOnMerchPage() == true) {
+        if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=contactme";
         }
         $("html, body").animate(
@@ -282,8 +286,8 @@ $(document).ready(function () {
     }
 
     //change this to check if NOT on index page so we can redirect to from a specific item as well 
-    function checkIfOnMerchPage() {
-        if (window.location.pathname == "/merchandise.html") {
+    function checkIfOnIndexPage() {
+        if (window.location.pathname == "/index.html") {
             return true;
         } else {
             return false;
