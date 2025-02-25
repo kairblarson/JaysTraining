@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap" rel="stylesheet" />
         <script src="https://js.stripe.com/v3/"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <title>Jay's Training</title>
     </head>
     <body>
@@ -107,13 +108,13 @@
                         <div class="content-box-6-merch">
                             <img src="images/img5.jpg" class="merch-img" />
                             <p class="merch-title">Train with Jay hoodie</p>
-                            <p class="merch-price">$25.99</p>
+                            <p class="merch-price">$45.00</p>
                             <button class="merch-buy-btn view-hoodie-btn">View</button>
                         </div>
                         <div class="content-box-6-merch">
                             <img src="images/img13.jpg" class="merch-img" />
-                            <p class="merch-title">Train with Jay Cap</p>
-                            <p class="merch-price">$14.99</p>
+                            <p class="merch-title">Train with Jay Signature Hat</p>
+                            <p class="merch-price">$30.00</p>
                             <button class="merch-buy-btn view-cap-btn">View</button>
                         </div>
                     </div>
@@ -135,7 +136,7 @@
                                 <p>Your blueprint to elite fitness-custom workouts, expert coaching, and weekly accountability to start your journey.</p>
                             </div>
                             <br />
-                            <button class="program-card-buy-btn" id="foundation-buy-btn">Buy Now!</button>
+                            <button class="program-card-buy-btn" id="foundation-buy-btn">Subscribe Now!</button>
                         </div>
                         <div class="content-box-3-program-content" id="tier2-card">
                             <h3 class="program-title">THE ACCELERATOR</h3>
@@ -147,7 +148,7 @@
                                 <p>Next-level results with advanced nutrition, personalized adjustments, and direct access to high-performance coaching.</p>
                             </div>
                             <br />
-                            <button class="program-card-buy-btn" id="accelerator-buy-btn">Buy Now!</button>
+                            <button class="program-card-buy-btn" id="accelerator-buy-btn">Subscribe Now!</button>
                         </div>
                         <div class="content-box-3-program-content" id="tier1-card">
                             <h3 class="program-title">ELITE EXPERIENCE</h3>
@@ -164,17 +165,17 @@
                     </div>
                 </div>
                 <!-- <div class="line-break"></div> -->
-                <div class="content-box-4" style="padding: 40px">
+                <form class="content-box-4" style="padding: 40px" id="contact-form">
                     <h2 class="content-box-4-title">CONTACT ME</h2>
                     <br />
-                    <h3 style="max-width: 80%">Feel free to send me a message if you have any questions about me or any of my programs</h3>
+                    <h3 style="max-width: 80%">Feel free to send me a message if you have any questions about me or my programs</h3>
                     <br /><br />
                     <div class="contact-wrapper">
                         <div class="contact-card">
-                            <input placeholder="Your Name" />
-                            <input placeholder="Email" />
-                            <textarea placeholder="Message"></textarea>
-                            <button class="send-msg-btn">Send</button>
+                            <input placeholder="Your Name" id="from_name" name="from_name"/>
+                            <input placeholder="Email" id="reply_to" name="reply_to"/>
+                            <textarea placeholder="Message" id="message" name="message"></textarea>
+                            <button class="send-msg-btn" id="send-msg-btn" type="submit">Send</button>
                         </div>
                         <div class="socials-card">
                             <a class="brand-logo-wrapper" href="https://www.instagram.com/jsouthard22" target="_blank">
@@ -198,29 +199,29 @@
                   </div> -->
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         <div class="footer">
             <div class="footer-details">
                 <a class="brand-logo-wrapper" href="https://www.instagram.com/jsouthard22" target="_blank">
-                    <img src="images/white-insta-icon.png" class="brand-logo-footer"/>
+                    <img src="images/white-insta-icon.png" class="brand-logo-footer" />
                 </a>
                 <a class="brand-logo-wrapper" href="mailto:Trainingwithjayy@gmail.com?subject=Training%20Inquiry">
-                    <img src="images/white-gmail-icon.png" class="brand-logo-footer"/>
+                    <img src="images/white-gmail-icon.png" class="brand-logo-footer" />
                 </a>
                 <a
                     class="brand-logo-wrapper"
                     href="https://www.google.com/maps/place/Arlington+Heights,+IL/@42.0933805,-88.0681571,12z/data=!3m1!4b1!4m6!3m5!1s0x880fba3bce5cfa37:0xd764707ce5fdcac3!8m2!3d42.0883603!4d-87.9806265!16zL20vMHM0Zmc?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                 >
-                    <img src="images/white-location-icon.png" class="brand-logo-footer"/>
+                    <img src="images/white-location-icon.png" class="brand-logo-footer" />
                 </a>
             </div>
             <small class="footer-copyright">C 2025 Copyright: Kai Larson</small>
         </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js?vers=2"></script>
+    <script src="script.js?vers=3"></script>
 </html>
 <!-- WORK ON THE BURGER MENU & ADDING MORE CONTENT -->

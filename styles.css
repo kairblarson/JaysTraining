@@ -324,7 +324,8 @@ p {
     box-shadow: rgb(186, 125, 226) 0px 0px 10px 0px;
 }
 .program-card-buy-btn,
-.merch-buy-btn {
+.merch-buy-btn, 
+.send-msg-btn {
     background-color: rgb(125, 152, 226);
     padding: 10px;
     border-radius: 5px;
@@ -332,14 +333,14 @@ p {
     font-weight: bold;
     width: 100%;
 }
-.merch-details-buy-btn, .merch-buy-btn {
+.merch-details-buy-btn, .merch-buy-btn, .program-card-buy-btn, .send-msg-btn {
     background-color: rgb(125, 152, 226);
     padding: 10px;
     border-radius: 5px;
     color: white;
     font-weight: 500;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
 }
 .merch-arrow {
     height: 40px;
@@ -427,14 +428,14 @@ textarea {
     width: 50%;
     height: 100%;
 }
-.send-msg-btn {
+/* .send-msg-btn {
     background-color: rgb(125, 152, 226);
     padding: 10px;
     border-radius: 5px;
     color: white;
     font-weight: bold;
     width: 100%;
-}
+} */
 .contact-wrapper {
     display: flex;
     align-items: start;
@@ -504,6 +505,7 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 .merch-img{
     height: 400px;
@@ -516,6 +518,7 @@ textarea {
     border: 1px solid gainsboro;
     border-radius: 10px;
     object-fit: cover;
+    width: 400px;
 }
 .merch-other-imgs-container {
     display: flex;
@@ -739,7 +742,7 @@ textarea {
         align-items: center;
     }
     .merch-page-img {
-        width: 200px;
+        width: 100%;
     }
     .merch-imgs-container {
 

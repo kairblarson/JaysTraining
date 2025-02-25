@@ -3,10 +3,58 @@ const stripe = Stripe("pk_test_51QufeMKIejYdW6t2zZK4YY12A9auKnZPxVVollB6onf26jFe
 $(document).ready(function () {
     let isMenuActive = false;
 
+    //need to do some form validation and add a loading modal or something
+    $("#contact-form").on("submit", function (event) {
+        emailjs.init("5TPwb3kOLF_MWJSG7");
+
+        event.preventDefault();
+
+        emailjs.sendForm("service_xraq8lh", "template_fvfhpkr", this).then(
+            function (response) {
+                alert("Email has been sent, we will get back to you shortly")
+                document.getElementById('contact-form').reset();
+            },
+            function (error) {
+                alert("Email could not be sent, please try again later")
+                console.log("FAILED...", error);
+            }
+        );
+    });
+
+    $("#merch-right-arrow").click(function () {
+        const selectedImage = $(".selected-image");
+        const selectedImageID = Number(selectedImage.attr("id").substring(10, selectedImage.attr("id").length));
+
+        if (selectedImageID >= 3) {
+            $("#merch-img-1").addClass("selected-image");
+            $("#selected-merch-image").attr("src", $("#merch-img-1").attr("src"));
+        } else {
+            $(`#merch-img-${selectedImageID + 1}`).addClass("selected-image");
+            $("#selected-merch-image").attr("src", $(`#merch-img-${selectedImageID + 1}`).attr("src"));
+        }
+
+        selectedImage.removeClass("selected-image");
+    });
+
+    $("#merch-left-arrow").click(function () {
+        const selectedImage = $(".selected-image");
+        const selectedImageID = Number(selectedImage.attr("id").substring(10, selectedImage.attr("id").length));
+
+        if (selectedImageID <= 1) {
+            $("#merch-img-3").addClass("selected-image");
+            $("#selected-merch-image").attr("src", $("#merch-img-3").attr("src"));
+        } else {
+            $(`#merch-img-${selectedImageID - 1}`).addClass("selected-image");
+            $("#selected-merch-image").attr("src", $(`#merch-img-${selectedImageID - 1}`).attr("src"));
+        }
+
+        selectedImage.removeClass("selected-image");
+    });
+
     //merch products
     $("#buy-hat-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
-        const paymentLink = `https://buy.stripe.com/test_4gwaHw7uP8Wn3Ha6oo`;
+        const paymentLink = `https://buy.stripe.com/test_5kA4j89CX6Of4Le28d`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;
@@ -14,7 +62,7 @@ $(document).ready(function () {
 
     $("#buy-sweatshirt-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
-        const paymentLink = `https://buy.stripe.com/test_aEU16W7uPgoP6Tm8wx`;
+        const paymentLink = `https://buy.stripe.com/test_eVa6rg3ezfkLa5yfZ4`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;
@@ -75,13 +123,13 @@ $(document).ready(function () {
         $(".content-gif-overlay").height(heightOfVideo);
     });
 
-    $(".view-hoodie-btn").click(function() {
-        window.location.href = "hoodie.html"
-    })
+    $(".view-hoodie-btn").click(function () {
+        window.location.href = "hoodie.html";
+    });
 
-    $(".view-cap-btn").click(function() {
-        window.location.href = "baseballcap.html"
-    })
+    $(".view-cap-btn").click(function () {
+        window.location.href = "baseballcap.html";
+    });
 
     $("#menu-container").click(function () {
         if (isMenuActive) {
@@ -285,7 +333,7 @@ $(document).ready(function () {
         isMenuActive = false;
     }
 
-    //change this to check if NOT on index page so we can redirect to from a specific item as well 
+    //change this to check if NOT on index page so we can redirect to from a specific item as well
     function checkIfOnIndexPage() {
         if (window.location.pathname == "/index.html") {
             return true;
