@@ -1,5 +1,3 @@
-const stripe = Stripe("pk_test_51QufeMKIejYdW6t2zZK4YY12A9auKnZPxVVollB6onf26jFe0rwBNmZMNY6CvDsnXJ03kmdTarXMFHkNxPFebpLy00zhRIKOMC");
-
 $(document).ready(function () {
     let isMenuActive = false;
 
@@ -54,7 +52,7 @@ $(document).ready(function () {
     //merch products
     $("#buy-hat-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
-        const paymentLink = `https://buy.stripe.com/test_5kA4j89CX6Of4Le28d`;
+        const paymentLink = `https://buy.stripe.com/28o3fuctoa0cbTObII`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;
@@ -62,7 +60,7 @@ $(document).ready(function () {
 
     $("#buy-sweatshirt-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
-        const paymentLink = `https://buy.stripe.com/test_eVa6rg3ezfkLa5yfZ4`;
+        const paymentLink = `https://buy.stripe.com/28o17mcto0pC7Dy6op`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;
@@ -89,6 +87,32 @@ $(document).ready(function () {
     $("#elite-buy-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
         const paymentLink = `https://buy.stripe.com/test_9AQeXM5mHdcDgtW148`;
+
+        // Redirect to the Payment Link
+        window.location.href = paymentLink;
+    });
+    //
+
+    //90 Day Challenge
+    $("#three-competitor-enroll-btn").on("click", function () {
+        // Create a new Payment Link with the dynamic price
+        const paymentLink = `https://buy.stripe.com/7sIeYc0KG8W85vqaEG`;
+
+        // Redirect to the Payment Link
+        window.location.href = paymentLink;
+    });
+
+    $("#ten-competitor-enroll-btn").on("click", function () {
+        // Create a new Payment Link with the dynamic price
+        const paymentLink = `https://buy.stripe.com/28o5nC9hcdco5vq4gj`;
+
+        // Redirect to the Payment Link
+        window.location.href = paymentLink;
+    });
+
+    $("#twenty-competitor-enroll-btn").on("click", function () {
+        // Create a new Payment Link with the dynamic price
+        const paymentLink = `https://buy.stripe.com/3cs4jy50W6O0f60004`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;
@@ -230,7 +254,7 @@ $(document).ready(function () {
         }
         $("html, body").animate(
             {
-                scrollTop: $(".content-box-5").offset().top - 100,
+                scrollTop: $(".content-box-7").offset().top - 100,
             },
             1000
         );
@@ -299,7 +323,7 @@ $(document).ready(function () {
         }
         $("html, body").animate(
             {
-                scrollTop: $(".content-box-5").offset().top - 100,
+                scrollTop: $(".content-box-7").offset().top - 100,
             },
             1000
         );
