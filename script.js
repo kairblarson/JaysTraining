@@ -249,6 +249,7 @@ $(document).ready(function () {
     });
 
     $("#nav-button-challenges").click(function () {
+        console.log("Scrolling to content box 7")
         if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=challenges";
         }
