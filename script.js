@@ -249,7 +249,6 @@ $(document).ready(function () {
     });
 
     $("#nav-button-challenges").click(function () {
-        console.log("Scrolling to content box 7")
         if (checkIfOnIndexPage() == false) {
             window.location.href = "index.html?scrollTo=challenges";
         }
@@ -395,7 +394,7 @@ $(document).ready(function () {
                     {
                         $("html, body").animate(
                             {
-                                scrollTop: $(".content-box-5").offset().top - 100,
+                                scrollTop: $(".content-box-7").offset().top - 100,
                             },
                             1000
                         );
