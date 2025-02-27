@@ -282,7 +282,8 @@ li {
     top: 0;
     left: 0;
 }
-.content-box-3-programs-container, .content-box-7-text {
+.content-box-3-programs-container,
+.content-box-7-text {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -366,6 +367,11 @@ p {
     width: 100%;
     font-size: 18px;
     border: 1px solid rgb(13, 39, 110);
+}
+.send-msg-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .enroll-btn {
     width: fit-content;
@@ -484,6 +490,23 @@ a {
     /* box-shadow: rgb(125, 152, 226) 0px 0px 10px 0px; */
     border: 1px solid gainsboro;
     padding: 5px;
+}
+.invalid-field {
+    border: 1px solid rgb(228, 205, 0);
+    background-color: yellow;
+}
+.loader {
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #ffffff 94%, #0000) top/8px 8px no-repeat, conic-gradient(#0000 30%, #ffffff);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+    animation: l13 1s infinite linear;
+}
+@keyframes l13 {
+    100% {
+        transform: rotate(1turn);
+    }
 }
 .modal-container {
     background-color: rgba(0, 0, 0, 0.427);

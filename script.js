@@ -1,23 +1,64 @@
 $(document).ready(function () {
     let isMenuActive = false;
 
+    $(".loader").hide();
+
     //need to do some form validation and add a loading modal or something
     $("#contact-form").on("submit", function (event) {
+        const isValidated = performFormValidation();
+
+        console.log("Is valid? " + isValidated);
+
+        if (!isValidated) return false;
+
+        $("#send-btn-text").hide();
+        $(".loader").show();
+
         emailjs.init("5TPwb3kOLF_MWJSG7");
 
         event.preventDefault();
 
         emailjs.sendForm("service_xraq8lh", "template_fvfhpkr", this).then(
             function (response) {
-                alert("Email has been sent, we will get back to you shortly")
-                document.getElementById('contact-form').reset();
+                $(".loader").hide();
+                $("#send-btn-text").show();
+                alert("Email has been sent, we will get back to you shortly");
+                document.getElementById("contact-form").reset();
             },
             function (error) {
-                alert("Email could not be sent, please try again later")
+                $(".loader").hide();
+                $("#send-btn-text").show();
+                alert("Email could not be sent, please try again later");
                 console.log("FAILED...", error);
             }
         );
     });
+
+    function performFormValidation() {
+        const nameField = $("#from_name");
+        const emailField = $("#reply_to");
+        const messageField = $("#message");
+
+        if (nameField[0].value.trim() === "") {
+            nameField.addClass("invalid-field");
+            alert("Please enter your name before sending a message");
+            return false;
+        }
+
+        if (emailField[0].value.trim() == "" || !emailField[0].value.trim().includes("@")) {
+            emailField.addClass("invalid-field");
+            alert("Please enter your email before sending a message");
+            return false;
+        }
+
+        if (messageField[0].value.trim() == "") {
+            messageField.addClass("invalid-field");
+            alert("Please enter a message before sending a message");
+            return false;
+        }
+
+        return true;
+    }
 
     $("#merch-right-arrow").click(function () {
         const selectedImage = $(".selected-image");
@@ -424,7 +465,3 @@ $(document).ready(function () {
         }
     }
 });
-//so the issue now is that we have to redirect to the main page when on the merch page if we want the nav buttons to work so we have 2 options
-//1. stay on the same page but inject the merchandise.html data into the main div when that is clicked and then switch back to the regular content when we click the nav button => we are NOT going this route because...
-//we would have to put all the index data into another file
-//2. use query parameters so it redirects and will scroll to wherever the query parameter says => lets go this route, this should make it easier actually
