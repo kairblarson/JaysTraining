@@ -166,6 +166,17 @@ select {
     text-align: start;
     color: rgb(46, 46, 46);
 }
+.content-box-7-title {
+    text-align: center;
+}
+.content-box-7-text-container {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 50px;
+}
 .content-box-5-title {
     margin-block: 50px;
 }
@@ -271,11 +282,14 @@ li {
     top: 0;
     left: 0;
 }
-.content-box-3-programs-container {
+.content-box-3-programs-container, .content-box-7-text {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+}
+.content-box-7-text {
+    max-width: 800px;
 }
 .content-box-3-program-content {
     /* background-color: orange; */
@@ -768,6 +782,9 @@ a {
     }
     .merch-other-img {
         width: 50px;
+    }
+    .content-box-7-text-container {
+        width: 100%;
     }
 }
 
