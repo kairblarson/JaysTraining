@@ -365,6 +365,7 @@ p {
     font-weight: 500;
     width: 100%;
     font-size: 18px;
+    border: 1px solid rgb(13, 39, 110);
 }
 .enroll-btn {
     width: fit-content;
