@@ -155,7 +155,7 @@ select {
     align-items: center;
     /* padding-top: 100px; */
 }
-.content-box-6 {
+.content-box-6, .content-box-7 {
     padding: 50px;
     padding-top: 150px;
 }
@@ -848,7 +848,6 @@ span {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-
     background: #cdcdcd;
     border-radius: 3px;
 
