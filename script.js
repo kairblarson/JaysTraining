@@ -111,7 +111,7 @@ $(document).ready(function () {
     //fitness plans
     $("#foundation-buy-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
-        const paymentLink = `https://buy.stripe.com/test_dR6cPEbL58Wn4Le4gi`;
+        const paymentLink = `https://buy.stripe.com/dR617m7947S4e1W28d`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;
@@ -119,7 +119,7 @@ $(document).ready(function () {
 
     $("#accelerator-buy-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
-        const paymentLink = `https://buy.stripe.com/test_dR65nc16rfkL1z27sv`;
+        const paymentLink = `https://buy.stripe.com/aEUdU8alg7S49LGeV0`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;
@@ -127,7 +127,7 @@ $(document).ready(function () {
 
     $("#elite-buy-btn").on("click", function () {
         // Create a new Payment Link with the dynamic price
-        const paymentLink = `https://buy.stripe.com/test_9AQeXM5mHdcDgtW148`;
+        const paymentLink = `https://buy.stripe.com/aEUaHWfFAdco6zu28f`;
 
         // Redirect to the Payment Link
         window.location.href = paymentLink;

@@ -157,7 +157,6 @@ select {
 }
 .content-box-6, .content-box-7 {
     padding: 50px;
-    padding-top: 150px;
 }
 .content-box-3-title,
 .content-box-2-title,
@@ -833,6 +832,9 @@ a {
     }
     .content-box-7-text-container {
         width: 100%;
+    }
+    .content-box-7 {
+        padding: 0px;
     }
 }
 
