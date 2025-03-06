@@ -101,11 +101,11 @@ select {
 }
 .content-name,
 .merch-name {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Work Sans", serif;
+    font-size: 35px;
+    font-weight: 800;
     color: white;
-    font-family: "Yellowtail", serif;
+    font-family: "Oswald", sans-serif;
+    /* font-family: "Yellowtail", serif; */
 }
 .merch-details-container {
     display: flex;
@@ -156,8 +156,8 @@ select {
     /* padding-top: 100px; */
 }
 .content-box-6, .content-box-7 {
-    padding: 50px;
-    margin-top: 100px;
+    /* padding: 50px; */
+    /* margin-top: 100px; */
 }
 .content-box-3-title,
 .content-box-2-title,
@@ -186,7 +186,8 @@ select {
     margin-block: 50px;
 }
 .content-box-2-title {
-    font-family: "Yellowtail", serif;
+    /* font-family: "Yellowtail", serif; */
+    font-family: "Oswald", sans-serif;
 }
 .content-box-2-img {
     width: 40%;
