@@ -223,8 +223,8 @@ select {
     height: 40px;
 }
 .about-me-images {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
@@ -680,9 +680,9 @@ a {
     .contact-card {
         width: 80%;
     }
-    #content-box-2-extra-imgs {
+    /* #content-box-2-extra-imgs {
         flex-wrap: wrap !important;
-    }
+    } */
     .testimonial-wrapper {
         flex-direction: column;
         justify-content: center;
@@ -755,7 +755,7 @@ a {
         max-height: calc(100vh - 100px);
     }
     #content-box-2-extra-imgs {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         gap: 10px !important;
     }
     .content-box-3-programs-container {
