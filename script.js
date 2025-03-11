@@ -60,6 +60,49 @@ $(document).ready(function () {
         return true;
     }
 
+    $("#trial_form").on("submit", function (event) {
+        const isValidated = validateTrialForm();
+
+        if (!isValidated) return false;
+
+        event.preventDefault();
+        
+        //consolidate the fitness goals input to a new one that just includes their goals => FIX THIS, IT COMES OUT BLANK FOR SOME REASON 
+        let fitnessGoals = "";
+        
+        $("#weight_loss").is(':checked') ? fitnessGoals+"Weight Loss, " : null;
+        $("#build_muscle").is(':checked') ? fitnessGoals+"Build Muscle, " : null;
+        $("#increase_flexibility").is(':checked') ? fitnessGoals+"Increase Flexibility, " : null;
+        $("#improve_endurance").is(':checked') ? fitnessGoals+"Improve Endurance, " : null;
+        $("#other").is(':checked') ? fitnessGoals+"Other, " : null;
+
+        $("#fitness_goals").val(fitnessGoals);
+
+        $("#send-btn-text").hide();
+        $(".loader").show();
+
+        emailjs.init("5TPwb3kOLF_MWJSG7");
+
+        emailjs.sendForm("service_xraq8lh", "template_wlvkz06", this).then(
+            function (response) {
+                $(".loader").hide();
+                $("#send-btn-text").show();
+                alert("Email has been sent, we will get back to you shortly");
+                document.getElementById("trial_form").reset();
+            },
+            function (error) {
+                $(".loader").hide();
+                $("#send-btn-text").show();
+                alert("Email could not be sent, please try again later");
+                console.log("FAILED...", error);
+            }
+        );
+    })
+
+    function validateTrialForm() {
+        return true;
+    }
+
     $("#merch-right-arrow").click(function () {
         const selectedImage = $(".selected-image");
         const selectedImageID = Number(selectedImage.attr("id").substring(10, selectedImage.attr("id").length));

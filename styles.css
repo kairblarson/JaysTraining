@@ -15,13 +15,22 @@ body {
 p,
 h1,
 h2,
-h3 {
+h3,
+label,
+select,
+textarea,
+input {
     color: rgb(75, 75, 75);
 }
 #main {
 }
 select {
     cursor: pointer;
+    width: fit-content;
+    min-width: 100px;
+    padding: 10px;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 3px;
 }
 .navbar {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -72,6 +81,12 @@ select {
 .content {
     display: flex;
     flex-direction: column;
+}
+.trial-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .content-main-gif {
     width: 100%;
@@ -149,13 +164,19 @@ select {
 .content-box-4,
 .content-box-5,
 .content-box-6,
-.content-box-7 {
+.content-box-7,
+.content-box-8 {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* padding-top: 100px; */
 }
-.content-box-6, .content-box-7 {
+.content-box-8 {
+    margin-top: 150px;
+    width: 80%
+}
+.content-box-6,
+.content-box-7 {
     /* padding: 50px; */
     /* margin-top: 100px; */
 }
@@ -426,7 +447,7 @@ p {
     border-radius: 5px;
     color: white;
 }
-input {
+.text-inputs {
     all: unset;
     border: 1px solid rgb(203, 203, 203);
     padding-inline: 10px;
@@ -490,6 +511,37 @@ a {
     width: 80%;
     gap: 50px;
 }
+.trial-wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    gap: 50px;
+}
+.trial-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.trial-card-inputs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.trial-card-left,
+.trial-card-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.trial-input-wrapper {
+    display: flex;
+    gap: 10px;
+} 
 .content-box-5-testimonial-img {
     width: 250px;
     height: 250px;
@@ -702,6 +754,9 @@ a {
     }
     .content-box-6 {
         padding-inline: 20px;
+    }
+    .trial-card-inputs {
+        flex-direction: column;
     }
 }
 
