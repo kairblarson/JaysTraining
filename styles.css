@@ -185,11 +185,15 @@ select {
 .content-box-4-title,
 .content-box-5-title,
 .content-box-6-title,
-.content-box-7-title {
+.content-box-7-title,
+.content-box-8-title {
     font-weight: bold;
     font-size: 40px;
     text-align: start;
     color: rgb(46, 46, 46);
+}
+.content-box-8-title {
+    text-align: center;
 }
 .content-box-7-title {
     text-align: center;
@@ -375,7 +379,8 @@ p {
 .program-card-buy-btn,
 .merch-buy-btn,
 .send-msg-btn,
-.enroll-btn {
+.enroll-btn,
+.submit-trial-btn {
     background-color: rgb(125, 152, 226);
     padding: 10px;
     border-radius: 5px;
@@ -387,7 +392,8 @@ p {
 .merch-buy-btn,
 .program-card-buy-btn,
 .send-msg-btn,
-.enroll-btn {
+.enroll-btn,
+.submit-trial-btn {
     background-color: rgb(125, 152, 226);
     padding: 10px;
     border-radius: 5px;
@@ -433,7 +439,8 @@ p {
 .send-msg-btn:hover,
 .merch-buy-btn:hover,
 .merch-details-buy-btn:hover,
-.enroll-btn:hover {
+.enroll-btn:hover,
+.submit-trial-btn:hover {
     scale: 1.02;
     cursor: pointer;
     box-shadow: rgb(125, 152, 226) 0px 0px 10px 0px;
