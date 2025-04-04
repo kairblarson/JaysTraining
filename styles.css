@@ -403,6 +403,11 @@ p {
     font-size: 18px;
     border: 1px solid rgb(13, 39, 110);
 }
+.submit-trial-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .send-msg-btn {
     display: flex;
     align-items: center;

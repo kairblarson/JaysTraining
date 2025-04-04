@@ -66,15 +66,15 @@ $(document).ready(function () {
         if (!isValidated) return false;
 
         event.preventDefault();
-        
-        //consolidate the fitness goals input to a new one that just includes their goals => FIX THIS, IT COMES OUT BLANK FOR SOME REASON 
+
+        //consolidate the fitness goals input to a new one that just includes their goals => FIX THIS, IT COMES OUT BLANK FOR SOME REASON
         let fitnessGoals = "";
-        
-        $("#weight_loss").is(':checked') ? fitnessGoals+"Weight Loss, " : null;
-        $("#build_muscle").is(':checked') ? fitnessGoals+"Build Muscle, " : null;
-        $("#increase_flexibility").is(':checked') ? fitnessGoals+"Increase Flexibility, " : null;
-        $("#improve_endurance").is(':checked') ? fitnessGoals+"Improve Endurance, " : null;
-        $("#other").is(':checked') ? fitnessGoals+"Other, " : null;
+
+        $("#weight_loss").is(":checked") ? fitnessGoals += "Weight Loss, " : null;
+        $("#build_muscle").is(":checked") ? fitnessGoals += "Build Muscle, " : null;
+        $("#increase_flexibility").is(":checked") ? fitnessGoals += "Increase Flexibility, " : null;
+        $("#improve_endurance").is(":checked") ? fitnessGoals += "Improve Endurance, " : null;
+        $("#other").is(":checked") ? fitnessGoals += "Other, " : null;
 
         $("#fitness_goals").val(fitnessGoals);
 
@@ -97,7 +97,7 @@ $(document).ready(function () {
                 console.log("FAILED...", error);
             }
         );
-    })
+    });
 
     function validateTrialForm() {
         return true;
